@@ -6,28 +6,9 @@
     <title>Абстрактный фестиваль 2025</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-<link rel="manifest" href="/favicon/site.webmanifest">
-    <script>
-      /* Настройка */
-      var dealerName = "YandexTicketsDealer";
-      var dealer = (window[dealerName] = window[dealerName] || []);
-      dealer.push([
-        "setDefaultClientKey",
-        "3b370b5d-e2ef-413a-a8b7-c1b26f78a85e",
-      ]);
-      dealer.push(["setDefaultRegionId", 213]);
-      /* Загрузка */
-      (function () {
-        var rnd = "?" + new Date().getTime() * Math.random();
-        var script = document.createElement("script");
-        var target = document.getElementsByTagName("script")[0];
-        script.async = true;
-        script.src = "https://widget.afisha.yandex.ru/dealer/dealer.js" + rnd;
-        target.parentNode.insertBefore(script, target);
-      })();
-    </script>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -74,13 +55,13 @@
     <!-- /Yandex.Metrika counter -->
   </head>
   <body>
-    <div class="side-ticket-button" 
-    onclick="window['YandexTicketsDealer'].push(['getDealer', function(dealer) { dealer.open({ id: '650519', type: 'event' }) }])">
- <div class="side-ticket-inner">
-   <img class="side-ticket-image" src="img/t-5.png" alt="Билет">
- </div>
-</div>
-
+    <div class="side-ticket-button">
+      <a href="https://widget.afisha.yandex.ru/w/events/650519?clientKey=3b370b5d-e2ef-413a-a8b7-c1b26f78a85e&regionId=213" target="_blank">
+        <div class="side-ticket-inner">
+          <img class="side-ticket-image" src="img/t-5.png" alt="Билет">
+        </div>
+      </a>
+    </div>
 
     <div class="main-container">
       <!-- Логотип и заголовок -->
@@ -152,44 +133,43 @@
         <img src="img/howitwas.svg" alt="Как это было" />
       </div>
 
-      <!-- Галерея фотографий -->
-<!-- Галерея фотографий (карусель) -->
-<div class="carousel-container">
-  <div class="carousel-wrapper">
-    <div class="carousel-slides">
-      <div class="carousel-slide active">
-        <img src="img/1.jpg" alt="Фото события 1" class="rotated-image" />
+      <!-- Галерея фотографий (карусель) -->
+      <div class="carousel-container">
+        <div class="carousel-wrapper">
+          <div class="carousel-slides">
+            <div class="carousel-slide active">
+              <img src="img/1.jpg" alt="Фото события 1" class="rotated-image" />
+            </div>
+            <div class="carousel-slide">
+              <img src="img/2.jpg" alt="Фото события 2" class="rotated-image" />
+            </div>
+            <div class="carousel-slide">
+              <img src="img/3.jpg" alt="Фото события 3" class="rotated-image" />
+            </div>
+            <div class="carousel-slide">
+              <img src="img/4.jpg" alt="Фото события 4" class="rotated-image" />
+            </div>
+            <div class="carousel-slide">
+              <img src="img/5.jpg" alt="Фото события 5" class="rotated-image" />
+            </div>
+            <div class="carousel-slide">
+              <img src="img/6.jpg" alt="Фото события 6" class="rotated-image" />
+            </div>
+          </div>
+          
+          <button class="carousel-button prev">&#10094;</button>
+          <button class="carousel-button next">&#10095;</button>
+          
+          <div class="carousel-dots">
+            <span class="carousel-dot active" data-slide="0"></span>
+            <span class="carousel-dot" data-slide="1"></span>
+            <span class="carousel-dot" data-slide="2"></span>
+            <span class="carousel-dot" data-slide="3"></span>
+            <span class="carousel-dot" data-slide="4"></span>
+            <span class="carousel-dot" data-slide="5"></span>
+          </div>
+        </div>
       </div>
-      <div class="carousel-slide">
-        <img src="img/2.jpg" alt="Фото события 2" class="rotated-image" />
-      </div>
-      <div class="carousel-slide">
-        <img src="img/3.jpg" alt="Фото события 3" class="rotated-image" />
-      </div>
-      <div class="carousel-slide">
-        <img src="img/4.jpg" alt="Фото события 4" class="rotated-image" />
-      </div>
-      <div class="carousel-slide">
-        <img src="img/5.jpg" alt="Фото события 5" class="rotated-image" />
-      </div>
-      <div class="carousel-slide">
-        <img src="img/6.jpg" alt="Фото события 6" class="rotated-image" />
-      </div>
-    </div>
-    
-    <button class="carousel-button prev">&#10094;</button>
-    <button class="carousel-button next">&#10095;</button>
-    
-    <div class="carousel-dots">
-      <span class="carousel-dot active" data-slide="0"></span>
-      <span class="carousel-dot" data-slide="1"></span>
-      <span class="carousel-dot" data-slide="2"></span>
-      <span class="carousel-dot" data-slide="3"></span>
-      <span class="carousel-dot" data-slide="4"></span>
-      <span class="carousel-dot" data-slide="5"></span>
-    </div>
-  </div>
-</div>
 
       <!-- Футер с соцсетями и билетами -->
       <footer class="footer-container">
@@ -208,29 +188,27 @@
         </div>
 
         <!-- Билеты -->
-        <div
-          id="tickets"
-          class="element"
-          onclick="window['YandexTicketsDealer'].push(['getDealer', function(dealer) { dealer.open({ id: '650519', type: 'event' }) }])"
-        >
-          <div class="overlap-group">
-            <div class="text-wrapper">БИЛЕТЫ</div>
-            <div class="div">БИЛЕТЫ</div>
-            <img class="XL" src="img/t-7.png" />
-            <img class="img" src="img/t-6.png" />
-            <img class="XL-2" src="img/t-5.png" />
-            <img class="XL-3" src="img/t-3.png" />
-            <div class="text-wrapper-2">БИЛЕТЫ</div>
-            <img class="XL-4" src="img/t-1.png" />
-            <img class="XL-5" src="img/t-2.png" />
-            <div class="text-wrapper-3">БИЛЕТЫ</div>
-            <div class="text-wrapper-4">БИЛЕТЫ</div>
-            <div class="text-wrapper-5">БИЛЕТЫ</div>
-            <div class="text-wrapper-6">БИЛЕТЫ</div>
-            <div class="text-wrapper-7">БИЛЕТЫ</div>
-            <div class="text-wrapper-8">БИЛЕТЫ</div>
-            <div class="text-wrapper-9">БИЛЕТЫ</div>
-          </div>
+        <div id="tickets" class="element">
+          <a href="https://widget.afisha.yandex.ru/w/events/650519?clientKey=3b370b5d-e2ef-413a-a8b7-c1b26f78a85e&regionId=213" target="_blank">
+            <div class="overlap-group">
+              <div class="text-wrapper">БИЛЕТЫ</div>
+              <div class="div">БИЛЕТЫ</div>
+              <img class="XL" src="img/t-7.png" />
+              <img class="img" src="img/t-6.png" />
+              <img class="XL-2" src="img/t-5.png" />
+              <img class="XL-3" src="img/t-3.png" />
+              <div class="text-wrapper-2">БИЛЕТЫ</div>
+              <img class="XL-4" src="img/t-1.png" />
+              <img class="XL-5" src="img/t-2.png" />
+              <div class="text-wrapper-3">БИЛЕТЫ</div>
+              <div class="text-wrapper-4">БИЛЕТЫ</div>
+              <div class="text-wrapper-5">БИЛЕТЫ</div>
+              <div class="text-wrapper-6">БИЛЕТЫ</div>
+              <div class="text-wrapper-7">БИЛЕТЫ</div>
+              <div class="text-wrapper-8">БИЛЕТЫ</div>
+              <div class="text-wrapper-9">БИЛЕТЫ</div>
+            </div>
+          </a>
         </div>
       </footer>
     </div>
@@ -295,70 +273,70 @@
       });
     </script>
 
-<script>
-  // Script to control the side-ticket-button animation
-document.addEventListener('DOMContentLoaded', function() {
-  const sideTicketButton = document.querySelector('.side-ticket-button');
-  let scrollTimer;
-  let isVisible = false;
-  let hasBeenShown = false;
-  
-  // Initial state - hide the ticket completely
-  sideTicketButton.style.transform = 'translateX(100%) rotate(10deg)';
-  
-  // Function to show the ticket
-  function showTicket() {
-    if (!isVisible) {
-      sideTicketButton.style.transform = 'translateX(25%) rotate(5deg)';
-      isVisible = true;
-      hasBeenShown = true;
-    }
-  }
-  
-  // Function to hide the ticket
-  function hideTicket() {
-    if (isVisible) {
-      sideTicketButton.style.transform = 'translateX(65%) rotate(10deg)';
-      isVisible = false;
-    }
-  }
-  
-  // After 3 seconds of inactivity, show the ticket
-  setTimeout(function() {
-    if (!hasBeenShown) {
-      showTicket();
-    }
-  }, 2000);
-  
-  // When user scrolls, hide the ticket
-  window.addEventListener('scroll', function() {
-    if (isVisible) {
-      hideTicket();
-    }
-    
-    // Clear the existing timer
-    clearTimeout(scrollTimer);
-    
-    // Set a new timer to show the ticket after 3 seconds of scroll inactivity
-    scrollTimer = setTimeout(function() {
-      showTicket();
-    }, 2000);
-  });
-  
-  // When user hovers over the ticket, keep it in the shown state
-  sideTicketButton.addEventListener('mouseenter', function() {
-    if (!isVisible) {
-      sideTicketButton.style.transform = 'translateX(25%) rotate(5deg)';
-    }
-  });
-  
-  // When user stops hovering, return to previous state
-  sideTicketButton.addEventListener('mouseleave', function() {
-    if (!isVisible) {
-      sideTicketButton.style.transform = 'translateX(65%) rotate(10deg)';
-    }
-  });
-});
-</script>
+    <script>
+      // Script to control the side-ticket-button animation
+      document.addEventListener('DOMContentLoaded', function() {
+        const sideTicketButton = document.querySelector('.side-ticket-button');
+        let scrollTimer;
+        let isVisible = false;
+        let hasBeenShown = false;
+        
+        // Initial state - hide the ticket completely
+        sideTicketButton.style.transform = 'translateX(100%) rotate(10deg)';
+        
+        // Function to show the ticket
+        function showTicket() {
+          if (!isVisible) {
+            sideTicketButton.style.transform = 'translateX(25%) rotate(5deg)';
+            isVisible = true;
+            hasBeenShown = true;
+          }
+        }
+        
+        // Function to hide the ticket
+        function hideTicket() {
+          if (isVisible) {
+            sideTicketButton.style.transform = 'translateX(65%) rotate(10deg)';
+            isVisible = false;
+          }
+        }
+        
+        // After 3 seconds of inactivity, show the ticket
+        setTimeout(function() {
+          if (!hasBeenShown) {
+            showTicket();
+          }
+        }, 2000);
+        
+        // When user scrolls, hide the ticket
+        window.addEventListener('scroll', function() {
+          if (isVisible) {
+            hideTicket();
+          }
+          
+          // Clear the existing timer
+          clearTimeout(scrollTimer);
+          
+          // Set a new timer to show the ticket after 3 seconds of scroll inactivity
+          scrollTimer = setTimeout(function() {
+            showTicket();
+          }, 2000);
+        });
+        
+        // When user hovers over the ticket, keep it in the shown state
+        sideTicketButton.addEventListener('mouseenter', function() {
+          if (!isVisible) {
+            sideTicketButton.style.transform = 'translateX(25%) rotate(5deg)';
+          }
+        });
+        
+        // When user stops hovering, return to previous state
+        sideTicketButton.addEventListener('mouseleave', function() {
+          if (!isVisible) {
+            sideTicketButton.style.transform = 'translateX(65%) rotate(10deg)';
+          }
+        });
+      });
+    </script>
   </body>
 </html>
