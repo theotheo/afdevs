@@ -295,5 +295,70 @@
       });
     </script>
 
+<script>
+  // Script to control the side-ticket-button animation
+document.addEventListener('DOMContentLoaded', function() {
+  const sideTicketButton = document.querySelector('.side-ticket-button');
+  let scrollTimer;
+  let isVisible = false;
+  let hasBeenShown = false;
+  
+  // Initial state - hide the ticket completely
+  sideTicketButton.style.transform = 'translateX(100%) rotate(10deg)';
+  
+  // Function to show the ticket
+  function showTicket() {
+    if (!isVisible) {
+      sideTicketButton.style.transform = 'translateX(25%) rotate(5deg)';
+      isVisible = true;
+      hasBeenShown = true;
+    }
+  }
+  
+  // Function to hide the ticket
+  function hideTicket() {
+    if (isVisible) {
+      sideTicketButton.style.transform = 'translateX(65%) rotate(10deg)';
+      isVisible = false;
+    }
+  }
+  
+  // After 3 seconds of inactivity, show the ticket
+  setTimeout(function() {
+    if (!hasBeenShown) {
+      showTicket();
+    }
+  }, 2000);
+  
+  // When user scrolls, hide the ticket
+  window.addEventListener('scroll', function() {
+    if (isVisible) {
+      hideTicket();
+    }
+    
+    // Clear the existing timer
+    clearTimeout(scrollTimer);
+    
+    // Set a new timer to show the ticket after 3 seconds of scroll inactivity
+    scrollTimer = setTimeout(function() {
+      showTicket();
+    }, 2000);
+  });
+  
+  // When user hovers over the ticket, keep it in the shown state
+  sideTicketButton.addEventListener('mouseenter', function() {
+    if (!isVisible) {
+      sideTicketButton.style.transform = 'translateX(25%) rotate(5deg)';
+    }
+  });
+  
+  // When user stops hovering, return to previous state
+  sideTicketButton.addEventListener('mouseleave', function() {
+    if (!isVisible) {
+      sideTicketButton.style.transform = 'translateX(65%) rotate(10deg)';
+    }
+  });
+});
+</script>
   </body>
 </html>
