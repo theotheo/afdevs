@@ -74,6 +74,14 @@
     <!-- /Yandex.Metrika counter -->
   </head>
   <body>
+    <div class="side-ticket-button" 
+    onclick="window['YandexTicketsDealer'].push(['getDealer', function(dealer) { dealer.open({ id: '650519', type: 'event' }) }])">
+ <div class="side-ticket-inner">
+   <img class="side-ticket-image" src="img/t-5.png" alt="Билет">
+ </div>
+</div>
+
+
     <div class="main-container">
       <!-- Логотип и заголовок -->
       <div class="content-container">
@@ -286,5 +294,6 @@
         }, 2500);
       });
     </script>
+
   </body>
 </html>

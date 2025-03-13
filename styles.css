@@ -1017,3 +1017,70 @@ background-color: rgba(255, 255, 255, 0.8);
     flex-direction: column;
   }
 }
+.side-ticket-button {
+  position: fixed;
+  top: 150px;
+  right: 0;
+  transform: translateX(65%) rotate(10deg);
+  transition: all 0.3s ease-out;
+  z-index: 9999;
+  cursor: pointer;
+  filter: drop-shadow(-5px 5px 5px rgba(0, 0, 0, 0.3));
+}
+
+.side-ticket-button:hover {
+  transform: translateX(25%) rotate(5deg);
+  filter: drop-shadow(-8px 8px 10px rgba(0, 0, 0, 0.4));
+}
+
+.side-ticket-image {
+  height: 30%;
+  width: auto;
+}
+
+/* Добавляем текст БИЛЕТЫ с помощью псевдоэлемента */
+.side-ticket-button::after {
+  content: "БИЛЕТЫ";
+  position: absolute;
+  bottom: 44%;
+  left: 50%;
+  transform: translate(-50%, 0) rotate(-5deg);
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  font-size: 14px;
+  color: #212529;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.side-ticket-button:hover::after {
+  opacity: 1;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .side-ticket-button {
+    top: 120px;
+  }
+  
+  .side-ticket-image {
+    height: 30%;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .side-ticket-button {
+    top: 100px;
+  }
+  
+  .side-ticket-image {
+    height: 120px;
+  }
+  
+  .side-ticket-button::after {
+    font-size: 10px;
+  }
+}
