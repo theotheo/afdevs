@@ -1,0 +1,646 @@
+/* Основные переменные */
+:root {
+    --tickets-scale: 0.5; /* Масштаб блока с билетами */
+  }
+  
+  /* Сброс базовых стилей */
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    background-image: url("img/gradient.png");
+    background-repeat: no-repeat;
+    background-position: center 1000px;
+    background-size: 100% 100%;
+  }
+  
+  /* Главный контейнер */
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  /* Контейнер для контента */
+  .content-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Логотип */
+  .logo-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+  }
+  
+  .logo-container img {
+    width: 80%;
+    max-width: 800px;
+  }
+  
+  /* Заголовок */
+  .title-container {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  .title-container img {
+    width: 60%;
+    max-width: 800px;
+  }
+  
+  /* Блок с бейджами события */
+  .event-badges-container {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    position: absolute;
+    border-radius: 20px;
+  }
+  
+  .badge-left {
+    left: 10%;
+    background-color: #ffffff;
+    border: 2px solid #212529;
+    transform: rotate(-4.73deg);
+    box-shadow: 0px 0px 0px 2px #ffffff;
+  }
+  
+  .badge-date {
+    left: 22%;
+    background-color: #79afff;
+    border: 2px solid #ffffff;
+    box-shadow: 0px 0px 0px 2px #79afff;
+  }
+  
+  .badge-title {
+    position: relative;
+    top: -5px;
+    right: 3%;
+    transform: rotate(1.97deg);
+    font-family: "Inter-SemiBold", Helvetica;
+    color: #212529;
+    text-align: center;
+  }
+  
+  .badge-right {
+    right: 10%;
+    background-color: #ffffff;
+    border: 2px solid #212529;
+    transform: rotate(2.31deg);
+    box-shadow: 0px 0px 0px 2px #ffffff;
+  }
+  
+  .badge-text {
+    color: #212529;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    font-size: 28px;
+    white-space: nowrap;
+  }
+  
+  .badge-date-text {
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 28px;
+    white-space: nowrap;
+  }
+  
+  /* Блок с группами */
+  .bands-container {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto;
+  }
+  
+  .bands-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .bands-image {
+    width: 80%;
+    max-width: 800px;
+    transform: rotate(-1.85deg);
+  }
+  
+  .link-wrapper {
+    position: absolute;
+    width: 8%;
+    height: 10%;
+    transform: rotate(-1.85deg);
+    transition: transform 0.3s ease;
+    z-index: 5;
+  }
+  
+  .link-wrapper:hover {
+    transform: rotate(28.15deg); /* -1.85 + 30 = 28.15 */
+  }
+  
+  .link-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .link-1 {
+    top: -6%;
+    right: 7%;
+  }
+  
+  .link-2 {
+    top: 41%;
+    right: 6%;
+  }
+  
+  .link-3 {
+    bottom: 32%;
+    left: 45%;
+  }
+  
+  .link-4 {
+    bottom: 40%;
+    left: 6%;
+  }
+  
+  .link-5 {
+    top: 7%;
+    left: 5%;
+  }
+  
+  /* Блок "Как это было" */
+  .how-it-was-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .how-it-was-container img {
+    width: 80%;
+    max-width: 800px;
+  }
+  
+  /* Контейнер для галереи */
+  .gallery-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .gallery-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .gallery-wrapper img {
+    width: 32%;
+    object-fit: contain;
+  }
+  
+  /* Футер */
+  .footer-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 20px;
+    padding: 0 5%;
+  }
+  
+  /* Социальные сети */
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    width: 50%;
+  }
+  
+  .social-link {
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .social-link:hover {
+    transform: scale(1.05) translateY(-5px);
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+  }
+  
+  .social-link img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    transition: filter 0.3s ease;
+  }
+  
+  .social-link:hover img {
+    filter: brightness(1.1);
+  }
+  
+  /* Билеты */
+  #tickets {
+    width: calc(100% * var(--tickets-scale));
+    max-width: calc(1136px * var(--tickets-scale));
+    aspect-ratio: 1136/528;
+    background-color: rgba(255, 255, 255, 1);
+    overflow: hidden;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgb(255, 255, 255) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    position: relative;
+    width: 70%;
+    cursor: pointer;
+
+  }
+  
+  #tickets .overlap-group {
+    position: relative;
+    width: 88%;
+    height: 108%;
+    top: -0.2%;
+    left: 6%;
+  }
+  
+  #tickets .text-wrapper {
+    position: absolute;
+    top: 4.5%;
+    left: 46%;
+    transform: rotate(-15deg);
+    color: #2d2d2d;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    font-size: calc(4vw * var(--tickets-scale));
+    text-align: right;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  #tickets .div {
+    position: absolute;
+    top: 48%;
+    left: 22.3%;
+    transform: rotate(5.6deg);
+    color: #2d2d2d;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    font-size: calc(4vw * var(--tickets-scale));
+    text-align: right;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  #tickets .XL {
+    position: absolute;
+    width: 50%;
+    height: 67%;
+    top: 11.7%;
+    left: 47%;
+    transition: transform 0.3s ease-out;
+  }
+  
+  #tickets .img {
+    position: absolute;
+    width: 50%;
+    height: 43.7%;
+    top: 48.4%;
+    left: 39.7%;
+    transition: transform 0.3s ease-out;
+  }
+  
+  #tickets .XL-2 {
+    position: absolute;
+    width: 50.4%;
+    height: 75.4%;
+    top: 0.2%;
+    left: 27.4%;
+    transition: transform 0.3s ease-out;
+  }
+  
+  #tickets .XL-3 {
+    position: absolute;
+    width: 49.8%;
+    height: 43.6%;
+    top: 48.6%;
+    left: 10.8%;
+    transition: transform 0.3s ease-out;
+  }
+  
+  #tickets .text-wrapper-2 {
+    position: absolute;
+    top: 41%;
+    left: 39.6%;
+    transform: rotate(40.26deg);
+    color: #2d2d2d;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    font-size: calc(4vw * var(--tickets-scale));
+    text-align: right;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  #tickets .XL-4 {
+    position: absolute;
+    width: 33.6%;
+    height: 68.1%;
+    top: 24%;
+    left: 49.5%;
+    transition: transform 0.3s ease-out;
+  }
+  
+  #tickets .XL-5 {
+    position: absolute;
+    width: 53%;
+    height: 55.6%;
+    top: 36.6%;
+    left: 29.7%;
+    transition: transform 0.3s ease-out;
+  }
+  
+  #tickets .text-wrapper-3 {
+    position: absolute;
+    top: 56.3%;
+    left: -2.6%;
+    transform: rotate(-60deg);
+    color: #ffffff;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    font-size: calc(4vw * var(--tickets-scale));
+    text-align: right;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  #tickets .text-wrapper-4 {
+    position: absolute;
+    top: 84%;
+    left: 17.5%;
+    transform: rotate(-16.37deg);
+    color: #2d2d2d;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    font-size: calc(4vw * var(--tickets-scale));
+    text-align: right;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  #tickets .text-wrapper-5 {
+    position: absolute;
+    top: 20.7%;
+    left: 24.7%;
+    transform: rotate(-51.24deg);
+    color: #ffffff;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    font-size: calc(4vw * var(--tickets-scale));
+    text-align: right;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  #tickets .text-wrapper-6 {
+    position: absolute;
+    top: 79.4%;
+    left: 80.2%;
+    transform: rotate(40.63deg);
+    color: #2d2d2d;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    font-size: calc(4vw * var(--tickets-scale));
+    text-align: right;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  #tickets .text-wrapper-7 {
+    position: absolute;
+    top: 11.1%;
+    left: 69.1%;
+    transform: rotate(40.26deg);
+    color: #ffffff;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    font-size: calc(4vw * var(--tickets-scale));
+    text-align: right;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  #tickets .text-wrapper-8 {
+    position: absolute;
+    top: 48%;
+    left: 78.6%;
+    transform: rotate(-11.41deg);
+    color: #ffffff;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    font-size: calc(4vw * var(--tickets-scale));
+    text-align: right;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  #tickets .text-wrapper-9 {
+    position: absolute;
+    top: 26.7%;
+    left: 5%;
+    transform: rotate(40.26deg);
+    color: #ffffff;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+    font-size: calc(4vw * var(--tickets-scale));
+    text-align: right;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  /* Анимации при наведении для билетов */
+  #tickets:hover .XL {
+    transform: translate(20px, -15px) rotate(3deg);
+  }
+  
+  #tickets:hover .img {
+    transform: translate(-15px, 10px) rotate(-2deg);
+  }
+  
+  #tickets:hover .XL-2 {
+    transform: translate(-10px, -20px) rotate(-5deg);
+  }
+  
+  #tickets:hover .XL-3 {
+    transform: translate(25px, 5px) rotate(4deg);
+  }
+  
+  #tickets:hover .XL-4 {
+    transform: translate(15px, 10px) rotate(-3deg);
+  }
+  
+  #tickets:hover .XL-5 {
+    transform: translate(-20px, 15px) rotate(2deg);
+  }
+  
+  /* Медиа-запросы для адаптивности */
+  @media (max-width: 1200px) {
+    .badge-text,
+    .badge-date-text {
+      font-size: 24px;
+    }
+  
+    .badge-title {
+      font-size: 26px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .badge-text,
+    .badge-date-text {
+      font-size: 20px;
+    }
+  
+    .badge-title {
+      font-size: 20px;
+    }
+  
+    .event-badges-container {
+      height: 100px;
+    }
+  
+    .badge {
+      padding: 12px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 0;
+    }
+  
+    .social-links {
+      width: 90%;
+      margin: 0 auto 20px;
+    }
+  
+    .social-link {
+      width: 80%;
+    }
+  
+    .social-link img {
+      width: 100%;
+    }
+  
+    #tickets {
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    .event-badges-container {
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+      padding: 15px 0;
+    }
+  
+    .badge {
+      position: relative;
+      left: auto;
+      right: auto;
+      margin: 8px 0;
+      width: 80%;
+      max-width: 300px;
+    }
+  
+    .badge-left {
+      order: 1;
+    }
+  
+    .badge-date {
+      order: 2;
+    }
+  
+    .badge-title {
+      order: 3;
+      margin: 12px 0;
+      transform: rotate(0deg);
+      top: 0;
+      right: 0;
+    }
+  
+    .badge-right {
+      order: 4;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .social-links {
+      width: 95%;
+    }
+  
+    .social-link {
+      width: 90%;
+    }
+  
+    .footer-container {
+      margin-top: 10px;
+    }
+  
+    .badge {
+      width: 90%;
+    }
+  
+    .badge-text,
+    .badge-date-text {
+      font-size: 16px;
+    }
+  
+    .badge-title {
+      font-size: 16px;
+    }
+  }
