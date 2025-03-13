@@ -499,29 +499,117 @@
   }
   
   /* Анимации при наведении для билетов */
-  #tickets:hover .XL {
-    transform: translate(20px, -15px) rotate(3deg);
-  }
-  
-  #tickets:hover .img {
-    transform: translate(-15px, 10px) rotate(-2deg);
-  }
-  
-  #tickets:hover .XL-2 {
-    transform: translate(-10px, -20px) rotate(-5deg);
-  }
-  
-  #tickets:hover .XL-3 {
-    transform: translate(25px, 5px) rotate(4deg);
-  }
-  
-  #tickets:hover .XL-4 {
-    transform: translate(15px, 10px) rotate(-3deg);
-  }
-  
-  #tickets:hover .XL-5 {
-    transform: translate(-20px, 15px) rotate(2deg);
-  }
+/* Анимации при наведении для билетов - эффект "отворачивания" из центра */
+/* Правая сторона - элементы движутся вправо-вниз */
+#tickets:hover .XL {
+  transform: translate(30px, 15px) rotate(8deg);
+}
+
+#tickets:hover .XL-4 {
+  transform: translate(40px, 20px) rotate(12deg);
+}
+
+/* Левая сторона - элементы движутся влево-вниз */
+#tickets:hover .XL-2 {
+  transform: translate(-35px, 20px) rotate(-10deg);
+}
+
+#tickets:hover .XL-3 {
+  transform: translate(-40px, 25px) rotate(-12deg);
+}
+
+/* Центральные элементы - разделяются в стороны */
+#tickets:hover .img {
+  transform: translate(25px, 10px) rotate(6deg);
+}
+
+#tickets:hover .XL-5 {
+  transform: translate(-30px, 15px) rotate(-8deg);
+}
+
+/* Анимации для текстовых элементов - разлетаются от центра */
+/* Правая сторона текста - меньше движения вверх, больше в сторону */
+#tickets:hover .text-wrapper,
+#tickets:hover .text-wrapper-7,
+#tickets:hover .text-wrapper-8 {
+  transform: translate(12px, -8px) rotate(calc(var(--rotation) + 3deg));
+}
+
+/* Левая сторона текста - меньше движения вверх, больше в сторону */
+#tickets:hover .text-wrapper-3,
+#tickets:hover .text-wrapper-5,
+#tickets:hover .text-wrapper-9 {
+  transform: translate(-12px, -8px) rotate(calc(var(--rotation) - 3deg));
+}
+
+/* Центральные тексты - умеренное движение вверх */
+#tickets:hover .div,
+#tickets:hover .text-wrapper-2,
+#tickets:hover .text-wrapper-4,
+#tickets:hover .text-wrapper-6 {
+  transform: translateY(-10px) rotate(var(--rotation));
+}
+
+/* Сохраняем исходные углы поворота для текстовых элементов */
+#tickets .text-wrapper {
+  --rotation: -15deg;
+  transform: rotate(var(--rotation));
+  transition: transform 0.3s ease-out;
+}
+
+#tickets .div {
+  --rotation: 5.6deg;
+  transform: rotate(var(--rotation));
+  transition: transform 0.3s ease-out;
+}
+
+#tickets .text-wrapper-2 {
+  --rotation: 40.26deg;
+  transform: rotate(var(--rotation));
+  transition: transform 0.3s ease-out;
+}
+
+#tickets .text-wrapper-3 {
+  --rotation: -60deg;
+  transform: rotate(var(--rotation));
+  transition: transform 0.3s ease-out;
+}
+
+#tickets .text-wrapper-4 {
+  --rotation: -16.37deg;
+  transform: rotate(var(--rotation));
+  transition: transform 0.3s ease-out;
+}
+
+#tickets .text-wrapper-5 {
+  --rotation: -51.24deg;
+  transform: rotate(var(--rotation));
+  transition: transform 0.3s ease-out;
+}
+
+#tickets .text-wrapper-6 {
+  --rotation: 40.63deg;
+  transform: rotate(var(--rotation));
+  transition: transform 0.3s ease-out;
+}
+
+#tickets .text-wrapper-7 {
+  --rotation: 40.26deg;
+  transform: rotate(var(--rotation));
+  transition: transform 0.3s ease-out;
+}
+
+#tickets .text-wrapper-8 {
+  --rotation: -11.41deg;
+  transform: rotate(var(--rotation));
+  transition: transform 0.3s ease-out;
+}
+
+#tickets .text-wrapper-9 {
+  --rotation: 40.26deg;
+  transform: rotate(var(--rotation));
+  transition: transform 0.3s ease-out;
+}
   
   /* Медиа-запросы для адаптивности */
   @media (max-width: 1200px) {
