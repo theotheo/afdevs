@@ -177,7 +177,7 @@ color:#678cf9
 }
 
 .link-icon {
-  width: 100%;
+  width: 80%;
   height: 100%;
   object-fit: cover;
 }
@@ -189,12 +189,14 @@ color:#678cf9
 
 .link-2 {
   top: 41%;
-  right: 6%;
+  right: 4%;
+  width: 10%;
+  height: 13%;
 }
 
 .link-3 {
-  bottom: 32%;
-  left: 45%;
+  bottom: 25%;
+  left: 48%;
 }
 
 .link-4 {
@@ -205,6 +207,8 @@ color:#678cf9
 .link-5 {
   top: 7%;
   left: 5%;
+  width: 10%;
+  height: 13%;
 }
 
 /* Блок "Как это было" */
