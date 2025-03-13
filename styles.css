@@ -57,6 +57,17 @@
     margin: 30px 0;
   }
   
+.club-link {
+  /* font-weight: 600; */
+  /* font-size: 40px; */
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+  text-decoration: none;
+  color:#678cf9
+}
+
   .title-container img {
     width: 60%;
     max-width: 800px;
@@ -82,15 +93,15 @@
   }
   
   .badge-left {
-    left: 10%;
+    left: 0%;
     background-color: #ffffff;
     border: 2px solid #212529;
-    transform: rotate(-4.73deg);
+    transform: rotate(4.73deg);
     box-shadow: 0px 0px 0px 2px #ffffff;
   }
   
   .badge-date {
-    left: 22%;
+    left: 35%;
     background-color: #79afff;
     border: 2px solid #ffffff;
     box-shadow: 0px 0px 0px 2px #79afff;
@@ -98,16 +109,16 @@
   
   .badge-title {
     position: relative;
-    top: -5px;
-    right: 3%;
-    transform: rotate(1.97deg);
+    top: 15px;
+    right: -15%;
+    transform: rotate(-1.97deg);
     font-family: "Inter-SemiBold", Helvetica;
     color: #212529;
     text-align: center;
   }
   
   .badge-right {
-    right: 10%;
+    right: 8%;
     background-color: #ffffff;
     border: 2px solid #212529;
     transform: rotate(2.31deg);
@@ -120,6 +131,7 @@
     font-weight: 600;
     font-size: 28px;
     white-space: nowrap;
+    text-decoration: none;
   }
   
   .badge-date-text {
@@ -619,7 +631,7 @@
     }
   
     .badge-title {
-      font-size: 26px;
+      font-size: 28px;
     }
   }
   
