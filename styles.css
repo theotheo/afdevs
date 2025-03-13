@@ -1,542 +1,542 @@
 /* Основные переменные */
 :root {
-    --tickets-scale: 0.5; /* Масштаб блока с билетами */
-  }
-  
-  /* Сброс базовых стилей */
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-    background-image: url("img/gradient.png");
-    background-repeat: no-repeat;
-    background-position: center 1000px;
-    background-size: 100% 100%;
-  }
-  
-  /* Главный контейнер */
-  .main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow-x: hidden;
-    max-width: 100%;
-    width: 100%;
-  }
-  
-  /* Контейнер для контента */
-  .content-container {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Логотип */
-  .logo-container {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 0px;
-  }
-  
-  .logo-container img {
-    width: 80%;
-    max-width: 800px;
-  }
-  
-  /* Заголовок */
-  .title-container {
-    width: 100%;
-    text-align: center;
-    margin: 30px 0;
-  }
-  
+  --tickets-scale: 0.5; /* Масштаб блока с билетами */
+}
+
+/* Сброс базовых стилей */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  background-image: url("img/gradient.png");
+  background-repeat: no-repeat;
+  background-position: center 1000px;
+  background-size: 100% 100%;
+}
+
+/* Главный контейнер */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Контейнер для контента */
+.content-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Логотип */
+.logo-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+}
+
+.logo-container img {
+  width: 80%;
+  max-width: 800px;
+}
+
+/* Заголовок */
+.title-container {
+  width: 100%;
+  text-align: center;
+  margin: 30px 0;
+}
+
 .club-link {
-  /* font-weight: 600; */
-  /* font-size: 40px; */
+/* font-weight: 600; */
+/* font-size: 40px; */
+text-align: right;
+letter-spacing: 0;
+line-height: normal;
+white-space: nowrap;
+text-decoration: none;
+color:#678cf9
+}
+
+.title-container img {
+  width: 60%;
+  max-width: 800px;
+}
+
+/* Блок с бейджами события */
+.event-badges-container {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  position: absolute;
+  border-radius: 20px;
+}
+
+.badge-left {
+  left: 0%;
+  background-color: #ffffff;
+  border: 2px solid #212529;
+  transform: rotate(4.73deg);
+  box-shadow: 0px 0px 0px 2px #ffffff;
+}
+
+.badge-date {
+  left: 35%;
+  background-color: #79afff;
+  border: 2px solid #ffffff;
+  box-shadow: 0px 0px 0px 2px #79afff;
+}
+
+.badge-title {
+  position: relative;
+  top: 15px;
+  right: -15%;
+  transform: rotate(-1.97deg);
+  font-family: "Inter-SemiBold", Helvetica;
+  color: #212529;
+  text-align: center;
+}
+
+.badge-right {
+  right: 8%;
+  background-color: #ffffff;
+  border: 2px solid #212529;
+  transform: rotate(2.31deg);
+  box-shadow: 0px 0px 0px 2px #ffffff;
+}
+
+.badge-text {
+  color: #212529;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  font-size: 28px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.badge-date-text {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 28px;
+  white-space: nowrap;
+}
+
+/* Блок с группами */
+.bands-container {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  margin: 50px auto;
+}
+
+.bands-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.bands-image {
+  width: 80%;
+  max-width: 800px;
+  transform: rotate(-1.85deg);
+}
+
+.link-wrapper {
+  position: absolute;
+  width: 8%;
+  height: 10%;
+  transform: rotate(-1.85deg);
+  transition: transform 0.3s ease;
+  z-index: 5;
+}
+
+.link-wrapper:hover {
+  transform: rotate(28.15deg); /* -1.85 + 30 = 28.15 */
+}
+
+.link-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.link-1 {
+  top: -6%;
+  right: 7%;
+}
+
+.link-2 {
+  top: 41%;
+  right: 6%;
+}
+
+.link-3 {
+  bottom: 32%;
+  left: 45%;
+}
+
+.link-4 {
+  bottom: 40%;
+  left: 6%;
+}
+
+.link-5 {
+  top: 7%;
+  left: 5%;
+}
+
+/* Блок "Как это было" */
+.how-it-was-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.how-it-was-container img {
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Контейнер для галереи */
+.gallery-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gallery-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.gallery-wrapper img {
+  width: 32%;
+  object-fit: contain;
+}
+
+/* Футер */
+.footer-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 20px;
+  padding: 0 5%;
+}
+
+/* Социальные сети */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+  width: 50%;
+}
+
+.social-link {
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.social-link:hover {
+  transform: scale(1.05) translateY(-5px);
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+}
+
+.social-link img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  transition: filter 0.3s ease;
+}
+
+.social-link:hover img {
+  filter: brightness(1.1);
+}
+
+/* Билеты */
+#tickets {
+  width: calc(100% * var(--tickets-scale));
+  max-width: calc(1136px * var(--tickets-scale));
+  aspect-ratio: 1136/528;
+  background-color: rgba(255, 255, 255, 1);
+  overflow: hidden;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  position: relative;
+  width: 70%;
+  cursor: pointer;
+
+}
+
+#tickets .overlap-group {
+  position: relative;
+  width: 88%;
+  height: 108%;
+  top: -0.2%;
+  left: 6%;
+}
+
+#tickets .text-wrapper {
+  position: absolute;
+  top: 4.5%;
+  left: 46%;
+  transform: rotate(-15deg);
+  color: #2d2d2d;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  font-size: calc(4vw * var(--tickets-scale));
   text-align: right;
   letter-spacing: 0;
   line-height: normal;
-  white-space: nowrap;
-  text-decoration: none;
-  color:#678cf9
 }
 
-  .title-container img {
-    width: 60%;
-    max-width: 800px;
-  }
-  
-  /* Блок с бейджами события */
-  .event-badges-container {
-    position: relative;
-    width: 100%;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-  }
-  
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    position: absolute;
-    border-radius: 20px;
-  }
-  
-  .badge-left {
-    left: 0%;
-    background-color: #ffffff;
-    border: 2px solid #212529;
-    transform: rotate(4.73deg);
-    box-shadow: 0px 0px 0px 2px #ffffff;
-  }
-  
-  .badge-date {
-    left: 35%;
-    background-color: #79afff;
-    border: 2px solid #ffffff;
-    box-shadow: 0px 0px 0px 2px #79afff;
-  }
-  
-  .badge-title {
-    position: relative;
-    top: 15px;
-    right: -15%;
-    transform: rotate(-1.97deg);
-    font-family: "Inter-SemiBold", Helvetica;
-    color: #212529;
-    text-align: center;
-  }
-  
-  .badge-right {
-    right: 8%;
-    background-color: #ffffff;
-    border: 2px solid #212529;
-    transform: rotate(2.31deg);
-    box-shadow: 0px 0px 0px 2px #ffffff;
-  }
-  
-  .badge-text {
-    color: #212529;
-    font-family: "Inter-SemiBold", Helvetica;
-    font-weight: 600;
-    font-size: 28px;
-    white-space: nowrap;
-    text-decoration: none;
-  }
-  
-  .badge-date-text {
-    font-family: "Inter-SemiBold", Helvetica;
-    font-weight: 600;
-    color: #ffffff;
-    font-size: 28px;
-    white-space: nowrap;
-  }
-  
-  /* Блок с группами */
-  .bands-container {
-    position: relative;
-    width: 90%;
-    max-width: 900px;
-    margin: 50px auto;
-  }
-  
-  .bands-wrapper {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .bands-image {
-    width: 80%;
-    max-width: 800px;
-    transform: rotate(-1.85deg);
-  }
-  
-  .link-wrapper {
-    position: absolute;
-    width: 8%;
-    height: 10%;
-    transform: rotate(-1.85deg);
-    transition: transform 0.3s ease;
-    z-index: 5;
-  }
-  
-  .link-wrapper:hover {
-    transform: rotate(28.15deg); /* -1.85 + 30 = 28.15 */
-  }
-  
-  .link-icon {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .link-1 {
-    top: -6%;
-    right: 7%;
-  }
-  
-  .link-2 {
-    top: 41%;
-    right: 6%;
-  }
-  
-  .link-3 {
-    bottom: 32%;
-    left: 45%;
-  }
-  
-  .link-4 {
-    bottom: 40%;
-    left: 6%;
-  }
-  
-  .link-5 {
-    top: 7%;
-    left: 5%;
-  }
-  
-  /* Блок "Как это было" */
-  .how-it-was-container {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .how-it-was-container img {
-    width: 100%;
-    max-width: 800px;
-  }
-  
-  /* Контейнер для галереи */
-  .gallery-container {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-  }
-  
-  .gallery-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .gallery-wrapper img {
-    width: 32%;
-    object-fit: contain;
-  }
-  
-  /* Футер */
-  .footer-container {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    margin-top: 20px;
-    padding: 0 5%;
-  }
-  
-  /* Социальные сети */
-  .social-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px;
-    width: 50%;
-  }
-  
-  .social-link {
-    margin-bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .social-link:hover {
-    transform: scale(1.05) translateY(-5px);
-    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
-  }
-  
-  .social-link img {
-    max-width: 100%;
-    height: auto;
-    width: auto;
-    transition: filter 0.3s ease;
-  }
-  
-  .social-link:hover img {
-    filter: brightness(1.1);
-  }
-  
-  /* Билеты */
-  #tickets {
-    width: calc(100% * var(--tickets-scale));
-    max-width: calc(1136px * var(--tickets-scale));
-    aspect-ratio: 1136/528;
-    background-color: rgba(255, 255, 255, 1);
-    overflow: hidden;
-    background: radial-gradient(
-      50% 50% at 50% 50%,
-      rgb(255, 255, 255) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    position: relative;
-    width: 70%;
-    cursor: pointer;
+#tickets .div {
+  position: absolute;
+  top: 48%;
+  left: 22.3%;
+  transform: rotate(5.6deg);
+  color: #2d2d2d;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  font-size: calc(4vw * var(--tickets-scale));
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+}
 
-  }
-  
-  #tickets .overlap-group {
-    position: relative;
-    width: 88%;
-    height: 108%;
-    top: -0.2%;
-    left: 6%;
-  }
-  
-  #tickets .text-wrapper {
-    position: absolute;
-    top: 4.5%;
-    left: 46%;
-    transform: rotate(-15deg);
-    color: #2d2d2d;
-    font-family: "Inter-SemiBold", Helvetica;
-    font-weight: 600;
-    font-size: calc(4vw * var(--tickets-scale));
-    text-align: right;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  #tickets .div {
-    position: absolute;
-    top: 48%;
-    left: 22.3%;
-    transform: rotate(5.6deg);
-    color: #2d2d2d;
-    font-family: "Inter-SemiBold", Helvetica;
-    font-weight: 600;
-    font-size: calc(4vw * var(--tickets-scale));
-    text-align: right;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  #tickets .XL {
-    position: absolute;
-    width: 50%;
-    height: 67%;
-    top: 11.7%;
-    left: 47%;
-    transition: transform 0.3s ease-out;
-  }
-  
-  #tickets .img {
-    position: absolute;
-    width: 50%;
-    height: 43.7%;
-    top: 48.4%;
-    left: 39.7%;
-    transition: transform 0.3s ease-out;
-  }
-  
-  #tickets .XL-2 {
-    position: absolute;
-    width: 50.4%;
-    height: 75.4%;
-    top: 0.2%;
-    left: 27.4%;
-    transition: transform 0.3s ease-out;
-  }
-  
-  #tickets .XL-3 {
-    position: absolute;
-    width: 49.8%;
-    height: 43.6%;
-    top: 48.6%;
-    left: 10.8%;
-    transition: transform 0.3s ease-out;
-  }
-  
-  #tickets .text-wrapper-2 {
-    position: absolute;
-    top: 41%;
-    left: 39.6%;
-    transform: rotate(40.26deg);
-    color: #2d2d2d;
-    font-family: "Inter-SemiBold", Helvetica;
-    font-weight: 600;
-    font-size: calc(4vw * var(--tickets-scale));
-    text-align: right;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  #tickets .XL-4 {
-    position: absolute;
-    width: 33.6%;
-    height: 68.1%;
-    top: 24%;
-    left: 49.5%;
-    transition: transform 0.3s ease-out;
-  }
-  
-  #tickets .XL-5 {
-    position: absolute;
-    width: 53%;
-    height: 55.6%;
-    top: 36.6%;
-    left: 29.7%;
-    transition: transform 0.3s ease-out;
-  }
-  
-  #tickets .text-wrapper-3 {
-    position: absolute;
-    top: 56.3%;
-    left: -2.6%;
-    transform: rotate(-60deg);
-    color: #ffffff;
-    font-family: "Inter-SemiBold", Helvetica;
-    font-weight: 600;
-    font-size: calc(4vw * var(--tickets-scale));
-    text-align: right;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  #tickets .text-wrapper-4 {
-    position: absolute;
-    top: 84%;
-    left: 17.5%;
-    transform: rotate(-16.37deg);
-    color: #2d2d2d;
-    font-family: "Inter-SemiBold", Helvetica;
-    font-weight: 600;
-    font-size: calc(4vw * var(--tickets-scale));
-    text-align: right;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  #tickets .text-wrapper-5 {
-    position: absolute;
-    top: 20.7%;
-    left: 24.7%;
-    transform: rotate(-51.24deg);
-    color: #ffffff;
-    font-family: "Inter-SemiBold", Helvetica;
-    font-weight: 600;
-    font-size: calc(4vw * var(--tickets-scale));
-    text-align: right;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  #tickets .text-wrapper-6 {
-    position: absolute;
-    top: 79.4%;
-    left: 80.2%;
-    transform: rotate(40.63deg);
-    color: #2d2d2d;
-    font-family: "Inter-SemiBold", Helvetica;
-    font-weight: 600;
-    font-size: calc(4vw * var(--tickets-scale));
-    text-align: right;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  #tickets .text-wrapper-7 {
-    position: absolute;
-    top: 11.1%;
-    left: 69.1%;
-    transform: rotate(40.26deg);
-    color: #ffffff;
-    font-family: "Inter-SemiBold", Helvetica;
-    font-weight: 600;
-    font-size: calc(4vw * var(--tickets-scale));
-    text-align: right;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  #tickets .text-wrapper-8 {
-    position: absolute;
-    top: 48%;
-    left: 78.6%;
-    transform: rotate(-11.41deg);
-    color: #ffffff;
-    font-family: "Inter-SemiBold", Helvetica;
-    font-weight: 600;
-    font-size: calc(4vw * var(--tickets-scale));
-    text-align: right;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  #tickets .text-wrapper-9 {
-    position: absolute;
-    top: 26.7%;
-    left: 5%;
-    transform: rotate(40.26deg);
-    color: #ffffff;
-    font-family: "Inter-SemiBold", Helvetica;
-    font-weight: 600;
-    font-size: calc(4vw * var(--tickets-scale));
-    text-align: right;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  /* Анимации при наведении для билетов */
+#tickets .XL {
+  position: absolute;
+  width: 50%;
+  height: 67%;
+  top: 11.7%;
+  left: 47%;
+  transition: transform 0.3s ease-out;
+}
+
+#tickets .img {
+  position: absolute;
+  width: 50%;
+  height: 43.7%;
+  top: 48.4%;
+  left: 39.7%;
+  transition: transform 0.3s ease-out;
+}
+
+#tickets .XL-2 {
+  position: absolute;
+  width: 50.4%;
+  height: 75.4%;
+  top: 0.2%;
+  left: 27.4%;
+  transition: transform 0.3s ease-out;
+}
+
+#tickets .XL-3 {
+  position: absolute;
+  width: 49.8%;
+  height: 43.6%;
+  top: 48.6%;
+  left: 10.8%;
+  transition: transform 0.3s ease-out;
+}
+
+#tickets .text-wrapper-2 {
+  position: absolute;
+  top: 41%;
+  left: 39.6%;
+  transform: rotate(40.26deg);
+  color: #2d2d2d;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  font-size: calc(4vw * var(--tickets-scale));
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+#tickets .XL-4 {
+  position: absolute;
+  width: 33.6%;
+  height: 68.1%;
+  top: 24%;
+  left: 49.5%;
+  transition: transform 0.3s ease-out;
+}
+
+#tickets .XL-5 {
+  position: absolute;
+  width: 53%;
+  height: 55.6%;
+  top: 36.6%;
+  left: 29.7%;
+  transition: transform 0.3s ease-out;
+}
+
+#tickets .text-wrapper-3 {
+  position: absolute;
+  top: 56.3%;
+  left: -2.6%;
+  transform: rotate(-60deg);
+  color: #ffffff;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  font-size: calc(4vw * var(--tickets-scale));
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+#tickets .text-wrapper-4 {
+  position: absolute;
+  top: 84%;
+  left: 17.5%;
+  transform: rotate(-16.37deg);
+  color: #2d2d2d;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  font-size: calc(4vw * var(--tickets-scale));
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+#tickets .text-wrapper-5 {
+  position: absolute;
+  top: 20.7%;
+  left: 24.7%;
+  transform: rotate(-51.24deg);
+  color: #ffffff;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  font-size: calc(4vw * var(--tickets-scale));
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+#tickets .text-wrapper-6 {
+  position: absolute;
+  top: 79.4%;
+  left: 80.2%;
+  transform: rotate(40.63deg);
+  color: #2d2d2d;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  font-size: calc(4vw * var(--tickets-scale));
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+#tickets .text-wrapper-7 {
+  position: absolute;
+  top: 11.1%;
+  left: 69.1%;
+  transform: rotate(40.26deg);
+  color: #ffffff;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  font-size: calc(4vw * var(--tickets-scale));
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+#tickets .text-wrapper-8 {
+  position: absolute;
+  top: 48%;
+  left: 78.6%;
+  transform: rotate(-11.41deg);
+  color: #ffffff;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  font-size: calc(4vw * var(--tickets-scale));
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+#tickets .text-wrapper-9 {
+  position: absolute;
+  top: 26.7%;
+  left: 5%;
+  transform: rotate(40.26deg);
+  color: #ffffff;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  font-size: calc(4vw * var(--tickets-scale));
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+/* Анимации при наведении для билетов */
 /* Анимации при наведении для билетов - эффект "отворачивания" из центра */
 /* Правая сторона - элементы движутся вправо-вниз */
 #tickets:hover .XL {
-  transform: translate(30px, 15px) rotate(8deg);
+transform: translate(30px, 15px) rotate(8deg);
 }
 
 #tickets:hover .XL-4 {
-  transform: translate(40px, 20px) rotate(12deg);
+transform: translate(40px, 20px) rotate(12deg);
 }
 
 /* Левая сторона - элементы движутся влево-вниз */
 #tickets:hover .XL-2 {
-  transform: translate(-35px, 20px) rotate(-10deg);
+transform: translate(-35px, 20px) rotate(-10deg);
 }
 
 #tickets:hover .XL-3 {
-  transform: translate(-40px, 25px) rotate(-12deg);
+transform: translate(-40px, 25px) rotate(-12deg);
 }
 
 /* Центральные элементы - разделяются в стороны */
 #tickets:hover .img {
-  transform: translate(25px, 10px) rotate(6deg);
+transform: translate(25px, 10px) rotate(6deg);
 }
 
 #tickets:hover .XL-5 {
-  transform: translate(-30px, 15px) rotate(-8deg);
+transform: translate(-30px, 15px) rotate(-8deg);
 }
 
 /* Анимации для текстовых элементов - разлетаются от центра */
@@ -544,14 +544,14 @@
 #tickets:hover .text-wrapper,
 #tickets:hover .text-wrapper-7,
 #tickets:hover .text-wrapper-8 {
-  transform: translate(12px, -8px) rotate(calc(var(--rotation) + 3deg));
+transform: translate(12px, -8px) rotate(calc(var(--rotation) + 3deg));
 }
 
 /* Левая сторона текста - меньше движения вверх, больше в сторону */
 #tickets:hover .text-wrapper-3,
 #tickets:hover .text-wrapper-5,
 #tickets:hover .text-wrapper-9 {
-  transform: translate(-12px, -8px) rotate(calc(var(--rotation) - 3deg));
+transform: translate(-12px, -8px) rotate(calc(var(--rotation) - 3deg));
 }
 
 /* Центральные тексты - умеренное движение вверх */
@@ -559,404 +559,461 @@
 #tickets:hover .text-wrapper-2,
 #tickets:hover .text-wrapper-4,
 #tickets:hover .text-wrapper-6 {
-  transform: translateY(-10px) rotate(var(--rotation));
+transform: translateY(-10px) rotate(var(--rotation));
 }
 
 /* Сохраняем исходные углы поворота для текстовых элементов */
 #tickets .text-wrapper {
-  --rotation: -15deg;
-  transform: rotate(var(--rotation));
-  transition: transform 0.3s ease-out;
+--rotation: -15deg;
+transform: rotate(var(--rotation));
+transition: transform 0.3s ease-out;
 }
 
 #tickets .div {
-  --rotation: 5.6deg;
-  transform: rotate(var(--rotation));
-  transition: transform 0.3s ease-out;
+--rotation: 5.6deg;
+transform: rotate(var(--rotation));
+transition: transform 0.3s ease-out;
 }
 
 #tickets .text-wrapper-2 {
-  --rotation: 40.26deg;
-  transform: rotate(var(--rotation));
-  transition: transform 0.3s ease-out;
+--rotation: 40.26deg;
+transform: rotate(var(--rotation));
+transition: transform 0.3s ease-out;
 }
 
 #tickets .text-wrapper-3 {
-  --rotation: -60deg;
-  transform: rotate(var(--rotation));
-  transition: transform 0.3s ease-out;
+--rotation: -60deg;
+transform: rotate(var(--rotation));
+transition: transform 0.3s ease-out;
 }
 
 #tickets .text-wrapper-4 {
-  --rotation: -16.37deg;
-  transform: rotate(var(--rotation));
-  transition: transform 0.3s ease-out;
+--rotation: -16.37deg;
+transform: rotate(var(--rotation));
+transition: transform 0.3s ease-out;
 }
 
 #tickets .text-wrapper-5 {
-  --rotation: -51.24deg;
-  transform: rotate(var(--rotation));
-  transition: transform 0.3s ease-out;
+--rotation: -51.24deg;
+transform: rotate(var(--rotation));
+transition: transform 0.3s ease-out;
 }
 
 #tickets .text-wrapper-6 {
-  --rotation: 40.63deg;
-  transform: rotate(var(--rotation));
-  transition: transform 0.3s ease-out;
+--rotation: 40.63deg;
+transform: rotate(var(--rotation));
+transition: transform 0.3s ease-out;
 }
 
 #tickets .text-wrapper-7 {
-  --rotation: 40.26deg;
-  transform: rotate(var(--rotation));
-  transition: transform 0.3s ease-out;
+--rotation: 40.26deg;
+transform: rotate(var(--rotation));
+transition: transform 0.3s ease-out;
 }
 
 #tickets .text-wrapper-8 {
-  --rotation: -11.41deg;
-  transform: rotate(var(--rotation));
-  transition: transform 0.3s ease-out;
+--rotation: -11.41deg;
+transform: rotate(var(--rotation));
+transition: transform 0.3s ease-out;
 }
 
 #tickets .text-wrapper-9 {
-  --rotation: 40.26deg;
-  transform: rotate(var(--rotation));
-  transition: transform 0.3s ease-out;
+--rotation: 40.26deg;
+transform: rotate(var(--rotation));
+transition: transform 0.3s ease-out;
 }
-  
-  /* Медиа-запросы для адаптивности */
-  @media (max-width: 1200px) {
-    .badge-text,
-    .badge-date-text {
-      font-size: 24px;
-    }
-  
-    .badge-title {
-      font-size: 28px;
-    }
-  }
-  
-  @media (max-width: 992px) {
-    .badge-text,
-    .badge-date-text {
-      font-size: 20px;
-    }
-  
-    .badge-title {
-      font-size: 20px;
-    }
-  
-    .event-badges-container {
-      height: 100px;
-    }
-  
-    .badge {
-      padding: 12px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      padding: 0;
-    }
-  
-    .social-links {
-      width: 90%;
-      margin: 0 auto 20px;
-    }
-  
-    .social-link {
-      width: 80%;
-    }
-  
-    .social-link img {
-      width: 100%;
-    }
-  
-    #tickets {
-      width: 90%;
-      margin: 0 auto;
-    }
-  
-    .event-badges-container {
-      height: auto;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 30px;
-      padding: 15px 0;
-    }
-  
-    .badge {
-      position: relative;
-      left: auto;
-      right: auto;
-      margin: 8px 0;
-      width: 80%;
-      max-width: 300px;
-    }
-  
-    .badge-left {
-      order: 1;
-    }
-  
-    .badge-date {
-      order: 2;
-    }
-  
-    .badge-title {
-      order: 3;
-      margin: 12px 0;
-      transform: rotate(0deg);
-      top: 0;
-      right: 0;
-    }
-  
-    .badge-right {
-      order: 4;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .social-links {
-      width: 95%;
-    }
-  
-    .social-link {
-      width: 90%;
-    }
-  
-    .footer-container {
-      margin-top: 10px;
-    }
-  
-    .badge {
-      width: 90%;
-    }
-  
-    .badge-text,
-    .badge-date-text {
-      font-size: 16px;
-    }
-  
-    .badge-title {
-      font-size: 16px;
-    }
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 1200px) {
+  .badge-text,
+  .badge-date-text {
+    font-size: 24px;
   }
 
-/* Styles for the photo carousel */
-/* Styles for the photo carousel */
-.carousel-container {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  margin: 30px 0;
+  .badge-title {
+    font-size: 28px;
+  }
 }
 
-.carousel-wrapper {
-  position: relative;
-  width: 90%;
-  max-width: 1000px;
-  aspect-ratio: 16/9;
+@media (max-width: 992px) {
+  .badge-text,
+  .badge-date-text {
+    font-size: 20px;
+  }
+
+  .badge-title {
+    font-size: 20px;
+  }
+
+  .event-badges-container {
+    height: 100px;
+  }
+
+  .badge {
+    padding: 12px;
+  }
 }
 
-.carousel-slides {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.carousel-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.8s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.carousel-slide.active {
-  opacity: 1;
-  z-index: 1;
-}
-
-.carousel-slide img {
-  width: 98%;
-  height: 95%;
-  object-fit: cover;
-  transform: rotate(var(--rotation));
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.5s ease;
-  filter: contrast(105%) brightness(95%) sepia(10%);
-  position: relative;
-}
-
-/* Добавляем грязный фильтр с помощью псевдоэлемента */
-.carousel-slide img::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncR type="discrete" tableValues="0 0.5 1"/><feFuncG type="discrete" tableValues="0 0.5 1"/><feFuncB type="discrete" tableValues="0 0.5 1"/></feComponentTransfer><feComponentTransfer><feFuncR type="linear" slope="0.2"/><feFuncG type="linear" slope="0.2"/><feFuncB type="linear" slope="0.2"/></feComponentTransfer></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.08"/></svg>'),
-              url('data:image/png;base64,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');
-  mix-blend-mode: overlay;
-  pointer-events: none;
-  opacity: 0;
-  z-index: 10;
-}
-
-/* Добавляем царапины */
-.carousel-slide::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAEsCAMAAADTvyqQAAAAilBMVEUAAAD////u7u7t7e3+/v7////v7+/+/v7+/v7v7+/+/v7+/v7v7+/v7+/+/v7v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/+/v7v7+/w8PDw8PDx8fHy8vLz8/P09PT19fX29vb39/f4+Pj5+fn6+vr7+/v8/Pz9/f3+/v7///+OgqnyAAAHbklEQVR42uzd6XbqIBQFYPIARAYJQgyJaTrdrv/+D3jVruvWThyAHRK/H/dXV3Vv9gYOwGEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABaZK4cLpaLeqvX622vVIzOVK4EgH/IXO0Htm2lTkoUTiEaO7YdvH4pAfiLGh10HbIUbQVpOqkpKXTbtUMA+IUJDj1HGYoocTzOoU/1UgA427jhREpZkb3dWQx3o8RRCknxdI4Aqk2dMBJCm0ixHdmO7PgSo/FsJLl4/BxqK4BJvQOjKRHK49WL9zXeXkHYUaEUAKP6jCjJKfmxnTgeXVEkd1mQBGu1MoGYuC7lhOxolYv0bNwjlExEABUrLVPwEaM0vPh2L4VyXU5IdxN9/eEZLQw5TRO63cRvhf2pYTRcz72b9HXCvNt+OTrh/RHV0b5DFPd8Y5uNzX6pLmqXecI8mzdYTtKhHx+9mY97xMT9VvnzFKHXaTuPIv0O+mPEP28kLubhbwfp13XeSRmLemtSJtNt6JPErhO3uVj/eS992OksZA4AShv2ORFz7xE5zSO/NnTUaWM5cYkIeVdG3UGfO8QVAEq6c4mTzY3j9+9DR9TiUpIgQW3sSzF3EqP+Rd5lXbpCRDcFlHDESDKaXX/Hn38fdI5aW8tVQp3rL0fPdnPl/c7ltlbWSdFoYq9Wx7/vIZej/v5ByJZeiR+kkj7m6BNlyYpjXZDPGCdZ95JzbLNkLwZpN1jRcr6Cz7qfYvz5K+jPFNJ2PfwYKZpn36Z3pXsYm4eaSnGiPmHQIwj6MeabsQc9Uo3foR/tOL3Tpqfhj1MmWSiLCXpM/2j2J0CQZFRYLRv0Z8lz0GWZocFRGzcm6NlLSRJBr7Idk4JSWT4MH3TuEA+Lq9HCZ5JYTHbQLYp62dXCJu+OOWr3K5a5pP+Uet45YhwOKOT1Ht5rG9OdbY7yjKgL+jDTt9vjTCItrIYPOkdZ69QdRQ6lpbSV6ZdyQbcJZQ0fj96CcVH30b48Y04jVV7nZNDt/FN039a0jdS6rCHo/DHS73z+k/clGRt0frnBaxJ0nYlJGXQ+Vxq38P0lR7zkoFsaTxLZBl3j9ETCS056Z+zLBj1v4Hhqf8u17mw7qvs84ePk6Vl3YdiPUBKTiJdcYQw0JyZl0PVl3bmGEYrQeCezKxt0bY/+Ls15KaPK+BLnfWDrO1Fmg27QZz+bJY9JnwBTdvLdpKRr8Z1rPBbVnJgMOu9f9Vy3pDvBNCcms4Ku6dBfPZozr9pTx5FkjZfHHFRKTLqCrmfoXsODr/tLjHgZQbc0Bd3Se4Lz4bxkYjI86HqCrrt/GsaS9SYmw4OuZ3HMe0M9R2PXm5h0Bl3H4ttIT93FOuDGJiazgq7jaZvkN9FRKilcbQdZwXmYYy1XkmldzZPo3LL32d1zrTNFcaqH0Ll7d6CjhtVPIJTmTuqu/K67XifTvJ57a9rfRR2z2hOTWUHPvxZ2Q9CZvmUlI0+NdEzyq3o9LKxmfXvWGvSOxoQ15EwySbI2fNfx8iJWLmtPTDqDnn8Ufu1dU83bfB8ot8TT4JWODbzP9O7e+UKx3Gv88L2/JKbxy/eLh6L5Bw0GncfOiXuXP1pAx3V00k2ZNXS/qpbzhJvyINLgk9bGpLfk7qZcGj50beNxO3Gy9IKpVdLNedHvN/HXF8bO40+mRNLjJv1+5PfPRl0kOj4m5aY9W/WafOhHCmEGGpbRPpMT1Rzd9ZHLhLsVH59H0kMXjaSNYsOeV7tvU/f+DxcWM5yYbpNv78lKLuEIevRs1ulLk75YaB7OpKQ0HJp1vfIcYz1fFn8eWr80LLz9Zmjy0nQXvVdauhs7yfxLuVhKZdhOSvfHBdaJIi+3QwOujP6cC+OBdDcWrRm7v34+oY/mDdYLkbXd+jDaKSgkN2t5+TdVJ+bIZSkx17+2xw3dYu3oUm6i6C6Vu75f43P3MwC+vJ7rXXHmtnmrg3cXrltsGZO/BDu3B7IkklB+jS+WysptsEuPu8Q1N2KxHdlWbBk7pqUiL6/HrroNvuDwSgWOUkJoXJWMn9KU2HSuhC8+NiPo5/i+bSl9YXeV4s7AtuPvxfxWKpd9XR31H1PGxY11QXlgfJ0X9bL7QXnCOu/lFnMRUn731KjLl45UQRl98Zr01qmJLaVKPW42iRg3K+ZHhR8BZrxe9HcX0WvWtVPR7NP3zI1+3lHzHkDYqnbvO+VyNNjdL76bm10k21jP9rPdIHKlQm2vXtBX6LG77tlvNUbkdXYtGr3fKXd7qVqXOTW7jNOKFNu251nWNu4NFrvV0+poP2tVxOl8vlrNFr/P56PXeDzeGk9xsnW8Jj36fP58KyxGZ0pVe/IcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADw3/oX+L+ux6xd/+YAAAAASUVORK5CYII=');
-  background-size: cover;
-  opacity: 0.1;
-  pointer-events: none;
-  z-index: 5;
-}
-
-/* Добавляем случайные повороты для каждого изображения */
-.carousel-slide:nth-child(1) img {
-  --rotation: -2deg;
-}
-
-.carousel-slide:nth-child(2) img {
-  --rotation: 1.5deg;
-}
-
-.carousel-slide:nth-child(3) img {
-  --rotation: -1.8deg;
-}
-
-.carousel-slide:nth-child(4) img {
-  --rotation: 2.3deg;
-}
-
-.carousel-slide:nth-child(5) img {
-  --rotation: -1.2deg;
-}
-
-.carousel-slide:nth-child(6) img {
-  --rotation: 1.7deg;
-}
-
-/* Добавляем небольшой эффект при активном слайде */
-.carousel-slide.active img {
-  transform: rotate(var(--rotation)) scale(1.02);
-}
-
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: none;
-  border-radius: 50%;
-  font-size: 20px;
-  color: #333;
-  cursor: pointer;
-  z-index: 2;
-  transition: background-color 0.3s, transform 0.3s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.carousel-button:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  transform: translateY(-50%) scale(1.1);
-}
-
-.carousel-button.prev {
-  left: 10px;
-}
-
-.carousel-button.next {
-  right: 10px;
-}
-
-.carousel-dots {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 2;
-}
-
-.carousel-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.carousel-dot.active {
-  background-color: #79afff;
-  transform: scale(1.2);
-}
-
-.carousel-dot:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
-  .carousel-button {
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
   }
-  
-  .carousel-dots {
-    bottom: 10px;
+
+  .social-links {
+    width: 90%;
+    margin: 0 auto 20px;
   }
-  
-  .carousel-dot {
-    width: 10px;
-    height: 10px;
+
+  .social-link {
+    width: 80%;
+  }
+
+  .social-link img {
+    width: 100%;
+  }
+
+  #tickets {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .event-badges-container {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 15px 0;
+  }
+
+  .badge {
+    position: relative;
+    left: auto;
+    right: auto;
+    margin: 8px 0;
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .badge-left {
+    order: 1;
+  }
+
+  .badge-date {
+    order: 2;
+  }
+
+  .badge-title {
+    order: 3;
+    margin: 12px 0;
+    transform: rotate(0deg);
+    top: 0;
+    right: 0;
+  }
+
+  .badge-right {
+    order: 4;
   }
 }
 
 @media (max-width: 480px) {
-  .carousel-wrapper {
+  .social-links {
     width: 95%;
   }
-  
-  .carousel-button {
-    width: 30px;
-    height: 30px;
-    font-size: 14px;
+
+  .social-link {
+    width: 90%;
+  }
+
+  .footer-container {
+    margin-top: 10px;
+  }
+
+  .badge {
+    width: 90%;
+  }
+
+  .badge-text,
+  .badge-date-text {
+    font-size: 16px;
+  }
+
+  .badge-title {
+    font-size: 16px;
+  }
+}
+
+/* Styles for the photo carousel */
+/* Styles for the photo carousel */
+.carousel-container {
+position: relative;
+width: 100%;
+display: flex;
+justify-content: center;
+overflow: hidden;
+margin: 30px 0;
+}
+
+.carousel-wrapper {
+position: relative;
+width: 90%;
+max-width: 1000px;
+aspect-ratio: 16/9;
+}
+
+.carousel-slides {
+width: 100%;
+height: 100%;
+position: relative;
+overflow: hidden;
+border-radius: 12px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-slide {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+opacity: 0;
+transition: opacity 0.8s ease;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.carousel-slide.active {
+opacity: 1;
+z-index: 1;
+}
+
+.carousel-slide img {
+width: 98%;
+height: 95%;
+object-fit: cover;
+transform: rotate(var(--rotation));
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+transition: transform 0.5s ease;
+filter: contrast(105%) brightness(95%) sepia(10%);
+position: relative;
+}
+
+/* Добавляем грязный фильтр с помощью псевдоэлемента */
+.carousel-slide img::after {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncR type="discrete" tableValues="0 0.5 1"/><feFuncG type="discrete" tableValues="0 0.5 1"/><feFuncB type="discrete" tableValues="0 0.5 1"/></feComponentTransfer><feComponentTransfer><feFuncR type="linear" slope="0.2"/><feFuncG type="linear" slope="0.2"/><feFuncB type="linear" slope="0.2"/></feComponentTransfer></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.08"/></svg>'),
+            url('data:image/png;base64,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');
+mix-blend-mode: overlay;
+pointer-events: none;
+opacity: 0;
+z-index: 10;
+}
+
+/* Добавляем царапины */
+.carousel-slide::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAEsCAMAAADTvyqQAAAAilBMVEUAAAD////u7u7t7e3+/v7////v7+/+/v7+/v7v7+/+/v7+/v7v7+/v7+/+/v7v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/+/v7v7+/w8PDw8PDx8fHy8vLz8/P09PT19fX29vb39/f4+Pj5+fn6+vr7+/v8/Pz9/f3+/v7///+OgqnyAAAHbklEQVR42uzd6XbqIBQFYPIARAYJQgyJaTrdrv/+D3jVruvWThyAHRK/H/dXV3Vv9gYOwGEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABaZK4cLpaLeqvX622vVIzOVK4EgH/IXO0Htm2lTkoUTiEaO7YdvH4pAfiLGh10HbIUbQVpOqkpKXTbtUMA+IUJDj1HGYoocTzOoU/1UgA427jhREpZkb3dWQx3o8RRCknxdI4Aqk2dMBJCm0ixHdmO7PgSo/FsJLl4/BxqK4BJvQOjKRHK49WL9zXeXkHYUaEUAKP6jCjJKfmxnTgeXVEkd1mQBGu1MoGYuC7lhOxolYv0bNwjlExEABUrLVPwEaM0vPh2L4VyXU5IdxN9/eEZLQw5TRO63cRvhf2pYTRcz72b9HXCvNt+OTrh/RHV0b5DFPd8Y5uNzX6pLmqXecI8mzdYTtKhHx+9mY97xMT9VvnzFKHXaTuPIv0O+mPEP28kLubhbwfp13XeSRmLemtSJtNt6JPErhO3uVj/eS992OksZA4AShv2ORFz7xE5zSO/NnTUaWM5cYkIeVdG3UGfO8QVAEq6c4mTzY3j9+9DR9TiUpIgQW3sSzF3EqP+Rd5lXbpCRDcFlHDESDKaXX/Hn38fdI5aW8tVQp3rL0fPdnPl/c7ltlbWSdFoYq9Wx7/vIZej/v5ByJZeiR+kkj7m6BNlyYpjXZDPGCdZ95JzbLNkLwZpN1jRcr6Cz7qfYvz5K+jPFNJ2PfwYKZpn36Z3pXsYm4eaSnGiPmHQIwj6MeabsQc9Uo3foR/tOL3Tpqfhj1MmWSiLCXpM/2j2J0CQZFRYLRv0Z8lz0GWZocFRGzcm6NlLSRJBr7Idk4JSWT4MH3TuEA+Lq9HCZ5JYTHbQLYp62dXCJu+OOWr3K5a5pP+Uet45YhwOKOT1Ht5rG9OdbY7yjKgL+jDTt9vjTCItrIYPOkdZ69QdRQ6lpbSV6ZdyQbcJZQ0fj96CcVH30b48Y04jVV7nZNDt/FN039a0jdS6rCHo/DHS73z+k/clGRt0frnBaxJ0nYlJGXQ+Vxq38P0lR7zkoFsaTxLZBl3j9ETCS056Z+zLBj1v4Hhqf8u17mw7qvs84ePk6Vl3YdiPUBKTiJdcYQw0JyZl0PVl3bmGEYrQeCezKxt0bY/+Ls15KaPK+BLnfWDrO1Fmg27QZz+bJY9JnwBTdvLdpKRr8Z1rPBbVnJgMOu9f9Vy3pDvBNCcms4Ku6dBfPZozr9pTx5FkjZfHHFRKTLqCrmfoXsODr/tLjHgZQbc0Bd3Se4Lz4bxkYjI86HqCrrt/GsaS9SYmw4OuZ3HMe0M9R2PXm5h0Bl3H4ttIT93FOuDGJiazgq7jaZvkN9FRKilcbQdZwXmYYy1XkmldzZPo3LL32d1zrTNFcaqH0Ll7d6CjhtVPIJTmTuqu/K67XifTvJ57a9rfRR2z2hOTWUHPvxZ2Q9CZvmUlI0+NdEzyq3o9LKxmfXvWGvSOxoQ15EwySbI2fNfx8iJWLmtPTDqDnn8Ufu1dU83bfB8ot8TT4JWODbzP9O7e+UKx3Gv88L2/JKbxy/eLh6L5Bw0GncfOiXuXP1pAx3V00k2ZNXS/qpbzhJvyINLgk9bGpLfk7qZcGj50beNxO3Gy9IKpVdLNedHvN/HXF8bO40+mRNLjJv1+5PfPRl0kOj4m5aY9W/WafOhHCmEGGpbRPpMT1Rzd9ZHLhLsVH59H0kMXjaSNYsOeV7tvU/f+DxcWM5yYbpNv78lKLuEIevRs1ulLk75YaB7OpKQ0HJp1vfIcYz1fFn8eWr80LLz9Zmjy0nQXvVdauhs7yfxLuVhKZdhOSvfHBdaJIi+3QwOujP6cC+OBdDcWrRm7v34+oY/mDdYLkbXd+jDaKSgkN2t5+TdVJ+bIZSkx17+2xw3dYu3oUm6i6C6Vu75f43P3MwC+vJ7rXXHmtnmrg3cXrltsGZO/BDu3B7IkklB+jS+WysptsEuPu8Q1N2KxHdlWbBk7pqUiL6/HrroNvuDwSgWOUkJoXJWMn9KU2HSuhC8+NiPo5/i+bSl9YXeV4s7AtuPvxfxWKpd9XR31H1PGxY11QXlgfJ0X9bL7QXnCOu/lFnMRUn731KjLl45UQRl98Zr01qmJLaVKPW42iRg3K+ZHhR8BZrxe9HcX0WvWtVPR7NP3zI1+3lHzHkDYqnbvO+VyNNjdL76bm10k21jP9rPdIHKlQm2vXtBX6LG77tlvNUbkdXYtGr3fKXd7qVqXOTW7jNOKFNu251nWNu4NFrvV0+poP2tVxOl8vlrNFr/P56PXeDzeGk9xsnW8Jj36fP58KyxGZ0pVe/IcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADw3/oX+L+ux6xd/+YAAAAASUVORK5CYII=');
+background-size: cover;
+opacity: 0.1;
+pointer-events: none;
+z-index: 5;
+}
+
+/* Добавляем случайные повороты для каждого изображения */
+.carousel-slide:nth-child(1) img {
+--rotation: -2deg;
+}
+
+.carousel-slide:nth-child(2) img {
+--rotation: 1.5deg;
+}
+
+.carousel-slide:nth-child(3) img {
+--rotation: -1.8deg;
+}
+
+.carousel-slide:nth-child(4) img {
+--rotation: 2.3deg;
+}
+
+.carousel-slide:nth-child(5) img {
+--rotation: -1.2deg;
+}
+
+.carousel-slide:nth-child(6) img {
+--rotation: 1.7deg;
+}
+
+/* Добавляем небольшой эффект при активном слайде */
+.carousel-slide.active img {
+transform: rotate(var(--rotation)) scale(1.02);
+}
+
+.carousel-button {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 50px;
+height: 50px;
+background-color: rgba(255, 255, 255, 0.7);
+border: none;
+border-radius: 50%;
+font-size: 20px;
+color: #333;
+cursor: pointer;
+z-index: 2;
+transition: background-color 0.3s, transform 0.3s;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.carousel-button:hover {
+background-color: rgba(255, 255, 255, 0.9);
+transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-button.prev {
+left: 10px;
+}
+
+.carousel-button.next {
+right: 10px;
+}
+
+.carousel-dots {
+position: absolute;
+bottom: 20px;
+left: 50%;
+transform: translateX(-50%);
+display: flex;
+gap: 10px;
+z-index: 2;
+}
+
+.carousel-dot {
+width: 12px;
+height: 12px;
+border-radius: 50%;
+background-color: rgba(255, 255, 255, 0.5);
+cursor: pointer;
+transition: background-color 0.3s, transform 0.3s;
+}
+
+.carousel-dot.active {
+background-color: #79afff;
+transform: scale(1.2);
+}
+
+.carousel-dot:hover {
+background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+.carousel-button {
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.carousel-dots {
+  bottom: 10px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+}
+}
+
+@media (max-width: 480px) {
+.carousel-wrapper {
+  width: 95%;
+}
+
+.carousel-button {
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+}
+
+.carousel-dots {
+  gap: 6px;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+}
+}
+
+/* Стили для технического футера */
+.tech-footer {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.tech-footer-badge {
+  background-color: #ffffff;
+  border: 2px solid #212529;
+  border-radius: 15px;
+  padding: 10px 20px;
+  transform: rotate(-0.8deg);
+  box-shadow: 0px 0px 0px 2px #ffffff;
+  max-width: 90%;
+  width: auto;
+}
+
+.tech-footer-content {
+  text-align: center;
+  font-family: "Inter-SemiBold", Helvetica, Arial, sans-serif;
+  color: #212529;
+  font-size: 14px;
+}
+
+.tech-footer-content p {
+  margin: 5px 0;
+}
+
+.tech-footer a {
+  color: #678cf9;
+  text-decoration: none;
+}
+
+.tech-footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .tech-footer-content {
+    font-size: 12px;
   }
   
-  .carousel-dots {
-    gap: 6px;
+  .tech-footer-badge {
+    padding: 8px 15px;
   }
-  
-  .carousel-dot {
-    width: 8px;
-    height: 8px;
+}
+
+@media (max-width: 480px) {
+  .tech-footer-content p:last-child {
+    display: flex;
+    flex-direction: column;
   }
 }
