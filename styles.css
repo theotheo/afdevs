@@ -12,6 +12,8 @@ body {
   background-repeat: no-repeat;
   background-position: center 1000px;
   background-size: 100% 100%;
+  font-family: 'Inter', sans-serif;
+
 }
 
 /* Главный контейнер */
@@ -1109,7 +1111,7 @@ background-color: rgba(255, 255, 255, 0.8);
   flex-direction: column;
   gap: 20px;
   align-items: center;
-  max-width: 600px;
+  /* max-width: 600px; */
   margin: 40px auto;
 }
 
