@@ -77,9 +77,12 @@
   </head>
   <body>
     <div class="side-ticket-button">
-      <a href="https://widget.afisha.yandex.ru/w/events/650519?clientKey=3b370b5d-e2ef-413a-a8b7-c1b26f78a85e&regionId=213" target="_blank">
+      <a
+        href="https://widget.afisha.yandex.ru/w/events/650519?clientKey=3b370b5d-e2ef-413a-a8b7-c1b26f78a85e&regionId=213"
+        target="_blank"
+      >
         <div class="side-ticket-inner">
-          <img class="side-ticket-image" src="img/t-5.png" alt="Билет">
+          <img class="side-ticket-image" src="img/t-5.png" alt="Билет" />
         </div>
       </a>
     </div>
@@ -97,24 +100,30 @@
 
         <!-- Информация о событии -->
         <div class="event-badges-container">
-          <div class="badge badge-left">
-            <a href="https://t.me/am_devs" class="badge-text"
-              >для элиты всех сортов</a
+          <div class="badges-top-row">
+            <div class="badge badge-august">
+              <div class="badge-text">24 августа</div>
+            </div>
+            <div class="badge-title">
+              <div class="badge-text">
+                <a class="club-link" href="https://clubpravda.ru/"
+                  >Клуб PRAVDA</a
             >
           </div>
-
-          <div class="badge badge-date">
-            <div class="badge-date-text">24 августа</div>
           </div>
-
-          <div class="badge-title">
-            <div class="badge-text">
-              <a class="club-link" href="https://clubpravda.ru/">Клуб PRAVDA</a>
+            <div class="badge badge-plus18">
+              <div class="badge-text">18+</div>
             </div>
           </div>
-
-          <div class="badge badge-right">
-            <div class="badge-text">18+</div>
+          <div class="badges-bottom-row">
+            <div class="badge badge-ticket">
+              <a
+                href="https://widget.afisha.yandex.ru/w/events/650519?clientKey=3b370b5d-e2ef-413a-a8b7-c1b26f78a85e&regionId=213"
+                target="_blank"
+                class="badge-date-text"
+                >купить билет</a
+              >
+            </div>
           </div>
         </div>
 
@@ -249,18 +258,17 @@
           <a href="https://t.me/afdevs25" class="social-link" target="_blank">
             <img src="img/tg.svg" alt="Telegram" />
           </a>
-          <a
-            href="https://vk.com/afdevs25"
-            class="social-link"
-            target="_blank"
-          >
+          <a href="https://vk.com/afdevs25" class="social-link" target="_blank">
             <img src="img/vk.svg" alt="VKontakte" />
           </a>
         </div>
 
         <!-- Билеты -->
         <div id="tickets" class="element">
-          <a href="https://widget.afisha.yandex.ru/w/events/650519?clientKey=3b370b5d-e2ef-413a-a8b7-c1b26f78a85e&regionId=213" target="_blank">
+          <a
+            href="https://widget.afisha.yandex.ru/w/events/650519?clientKey=3b370b5d-e2ef-413a-a8b7-c1b26f78a85e&regionId=213"
+            target="_blank"
+          >
             <div class="overlap-group">
               <div class="text-wrapper">БИЛЕТЫ</div>
               <div class="div">БИЛЕТЫ</div>
@@ -305,18 +313,24 @@
     <div class="tech-footer">
       <div class="tech-footer-badge">
         <div class="tech-footer-content">
-          <p>По всем вопросам пишите на <a href="mailto:afdevs25@gmail.com">afdevs25@gmail.com</a></p>
-          <p>ИП Кузин Николай Игоревич | ИНН 772988279910 | ОГРНИП 325774600103951</p>
+          <p>
+            По всем вопросам пишите на
+            <a href="mailto:afdevs25@gmail.com">afdevs25@gmail.com</a>
+          </p>
+          <p>
+            ИП Кузин Николай Игоревич | ИНН 772988279910 | ОГРНИП
+            325774600103951
+          </p>
         </div>
       </div>
     </div>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const slides = document.querySelectorAll('.carousel-slide');
-        const dots = document.querySelectorAll('.carousel-dot');
-        const prevButton = document.querySelector('.carousel-button.prev');
-        const nextButton = document.querySelector('.carousel-button.next');
+      document.addEventListener("DOMContentLoaded", function () {
+        const slides = document.querySelectorAll(".carousel-slide");
+        const dots = document.querySelectorAll(".carousel-dot");
+        const prevButton = document.querySelector(".carousel-button.prev");
+        const nextButton = document.querySelector(".carousel-button.next");
         let currentSlide = 0;
         
         // Function to show a specific slide
@@ -328,28 +342,28 @@
           }
           
           // Hide all slides and remove active class from dots
-          slides.forEach(slide => slide.classList.remove('active'));
-          dots.forEach(dot => dot.classList.remove('active'));
+          slides.forEach((slide) => slide.classList.remove("active"));
+          dots.forEach((dot) => dot.classList.remove("active"));
           
           // Show the selected slide and add active class to the corresponding dot
-          slides[index].classList.add('active');
-          dots[index].classList.add('active');
+          slides[index].classList.add("active");
+          dots[index].classList.add("active");
           
           currentSlide = index;
         }
         
         // Event listeners for prev and next buttons
-        prevButton.addEventListener('click', () => {
+        prevButton.addEventListener("click", () => {
           showSlide(currentSlide - 1);
         });
         
-        nextButton.addEventListener('click', () => {
+        nextButton.addEventListener("click", () => {
           showSlide(currentSlide + 1);
         });
         
         // Event listeners for dots
         dots.forEach((dot, index) => {
-          dot.addEventListener('click', () => {
+          dot.addEventListener("click", () => {
             showSlide(index);
           });
         });
@@ -363,19 +377,19 @@
 
     <script>
       // Script to control the side-ticket-button animation
-      document.addEventListener('DOMContentLoaded', function() {
-        const sideTicketButton = document.querySelector('.side-ticket-button');
+      document.addEventListener("DOMContentLoaded", function () {
+        const sideTicketButton = document.querySelector(".side-ticket-button");
         let scrollTimer;
         let isVisible = false;
         let hasBeenShown = false;
         
         // Initial state - hide the ticket completely
-        sideTicketButton.style.transform = 'translateX(100%) rotate(10deg)';
+        sideTicketButton.style.transform = "translateX(100%) rotate(10deg)";
         
         // Function to show the ticket
         function showTicket() {
           if (!isVisible) {
-            sideTicketButton.style.transform = 'translateX(25%) rotate(5deg)';
+            sideTicketButton.style.transform = "translateX(25%) rotate(5deg)";
             isVisible = true;
             hasBeenShown = true;
           }
@@ -384,20 +398,20 @@
         // Function to hide the ticket
         function hideTicket() {
           if (isVisible) {
-            sideTicketButton.style.transform = 'translateX(65%) rotate(10deg)';
+            sideTicketButton.style.transform = "translateX(65%) rotate(10deg)";
             isVisible = false;
           }
         }
         
         // After 3 seconds of inactivity, show the ticket
-        setTimeout(function() {
+        setTimeout(function () {
           if (!hasBeenShown) {
             showTicket();
           }
         }, 2000);
         
         // When user scrolls, hide the ticket
-        window.addEventListener('scroll', function() {
+        window.addEventListener("scroll", function () {
           if (isVisible) {
             hideTicket();
           }
@@ -406,22 +420,22 @@
           clearTimeout(scrollTimer);
           
           // Set a new timer to show the ticket after 3 seconds of scroll inactivity
-          scrollTimer = setTimeout(function() {
+          scrollTimer = setTimeout(function () {
             showTicket();
           }, 2000);
         });
         
         // When user hovers over the ticket, keep it in the shown state
-        sideTicketButton.addEventListener('mouseenter', function() {
+        sideTicketButton.addEventListener("mouseenter", function () {
           if (!isVisible) {
-            sideTicketButton.style.transform = 'translateX(25%) rotate(5deg)';
+            sideTicketButton.style.transform = "translateX(25%) rotate(5deg)";
           }
         });
         
         // When user stops hovering, return to previous state
-        sideTicketButton.addEventListener('mouseleave', function() {
+        sideTicketButton.addEventListener("mouseleave", function () {
           if (!isVisible) {
-            sideTicketButton.style.transform = 'translateX(65%) rotate(10deg)';
+            sideTicketButton.style.transform = "translateX(65%) rotate(10deg)";
           }
         });
       });

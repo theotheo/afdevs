@@ -79,10 +79,24 @@ color:#678cf9
 .event-badges-container {
   position: relative;
   width: 100%;
-  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.badges-top-row {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.badges-bottom-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .badge {
@@ -90,20 +104,18 @@ color:#678cf9
   align-items: center;
   justify-content: center;
   padding: 15px;
-  position: absolute;
   border-radius: 20px;
+  margin: 0 25px;
 }
 
-.badge-left {
-  left: 0%;
+.badge-august {
   background-color: #ffffff;
   border: 2px solid #212529;
   transform: rotate(4.73deg);
   box-shadow: 0px 0px 0px 2px #ffffff;
 }
 
-.badge-date {
-  left: 35%;
+.badge-ticket {
   background-color: #79afff;
   border: 2px solid #ffffff;
   box-shadow: 0px 0px 0px 2px #79afff;
@@ -111,16 +123,13 @@ color:#678cf9
 
 .badge-title {
   position: relative;
-  top: 15px;
-  right: -15%;
   transform: rotate(-1.97deg);
   font-family: "Inter-SemiBold", Helvetica;
   color: #212529;
   text-align: center;
 }
 
-.badge-right {
-  right: 8%;
+.badge-plus18 {
   background-color: #ffffff;
   border: 2px solid #212529;
   transform: rotate(2.31deg);
@@ -142,76 +151,10 @@ color:#678cf9
   color: #ffffff;
   font-size: 28px;
   white-space: nowrap;
+  text-decoration: none;
 }
 
-/* Блок с группами */
-.bands-container {
-  position: relative;
-  width: 90%;
-  max-width: 900px;
-  margin: 50px auto;
-}
 
-.bands-wrapper {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.bands-image {
-  width: 80%;
-  max-width: 800px;
-  transform: rotate(-1.85deg);
-}
-
-.link-wrapper {
-  position: absolute;
-  width: 8%;
-  height: 10%;
-  transform: rotate(-1.85deg);
-  transition: transform 0.3s ease;
-  z-index: 5;
-}
-
-.link-wrapper:hover {
-  transform: rotate(28.15deg); /* -1.85 + 30 = 28.15 */
-}
-
-.link-icon {
-  width: 80%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.link-1 {
-  top: -6%;
-  right: 7%;
-}
-
-.link-2 {
-  top: 41%;
-  right: 4%;
-  width: 10%;
-  height: 13%;
-}
-
-.link-3 {
-  bottom: 25%;
-  left: 48%;
-}
-
-.link-4 {
-  bottom: 40%;
-  left: 6%;
-}
-
-.link-5 {
-  top: 7%;
-  left: 5%;
-  width: 10%;
-  height: 13%;
-}
 
 /* Блок "Как это было" */
 .how-it-was-container {
@@ -687,39 +630,37 @@ transition: transform 0.3s ease-out;
   }
 
   .event-badges-container {
-    height: auto;
+    display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
     padding: 15px 0;
   }
 
+  .badges-top-row,
+  .badges-bottom-row {
+    display: contents;
+  }
+
   .badge {
-    position: relative;
-    left: auto;
-    right: auto;
-    margin: 8px 0;
+    margin: 8px 0 !important; /* Use important to override desktop margin */
     width: 80%;
     max-width: 300px;
   }
 
-  .badge-left {
+  .badge-title {
+    order: 3;
+  }
+
+  .badge-august {
     order: 1;
   }
 
-  .badge-date {
+  .badge-ticket {
     order: 2;
   }
 
-  .badge-title {
-    order: 3;
-    margin: 12px 0;
-    transform: rotate(0deg);
-    top: 0;
-    right: 0;
-  }
-
-  .badge-right {
+  .badge-plus18 {
     order: 4;
   }
 }
