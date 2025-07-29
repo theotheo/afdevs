@@ -648,6 +648,14 @@ transition: transform 0.3s ease-out;
     max-width: 300px;
   }
 
+  .badge-plus18 {
+    transform: rotate(2.31deg) !important;
+  }
+
+  .bands-grid {
+    margin-top: 90px; /* Added to prevent overlap */
+  }
+
   .badge-title {
     order: 3;
   }
