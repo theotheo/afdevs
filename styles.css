@@ -34,6 +34,9 @@ body {
 .ticket-wrap {
   position: relative;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ticket-btn {
@@ -42,11 +45,11 @@ body {
   cursor: pointer;
 }
 
-
 .ticket-svg {
   width: min(55vw, 370px);
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 .cat {
