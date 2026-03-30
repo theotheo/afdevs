@@ -40,28 +40,10 @@ body {
   opacity: 0.7;
 }
 
-/* V5: animated glitch → clean on hover */
 .ticket-svg {
   width: min(50vw, 340px);
   height: auto;
   display: block;
-}
-
-.ticket-svg .band {
-  animation: glitch-in 1.5s cubic-bezier(0.25, 0, 0, 1) forwards;
-  animation-delay: 0.3s;
-  transform: translateX(0);
-  transition: transform 1.2s cubic-bezier(0.25, 0, 0, 1);
-}
-
-@keyframes glitch-in {
-  from { transform: translateX(0); }
-  to   { transform: translateX(var(--dx)); }
-}
-
-/* при ховере — инверсия: translateX(5) → translateX(-5) */
-.ticket-btn-animated:hover .band {
-  transform: translateX(calc(var(--dx) * -1)) !important;
 }
 
 .cat {
