@@ -53,6 +53,25 @@
       </div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
+
+    <!-- Yandex Tickets widget -->
+    <script>
+      var dealerName = 'YandexTicketsDealer';
+      var dealer = window[dealerName] = window[dealerName] || [];
+      dealer.push(['setDefaultClientKey', '3b370b5d-e2ef-413a-a8b7-c1b26f78a85e']);
+      dealer.push(['setDefaultRegionId', 213]);
+      (function () {
+        var rnd = '?' + new Date().getTime() * Math.random();
+        var script = document.createElement('script');
+        var target = document.getElementsByTagName('script')[0];
+        script.async = true;
+        script.src = 'https://widget.afisha.yandex.ru/dealer/dealer.js' + rnd;
+        target.parentNode.insertBefore(script, target);
+      })();
+    </script>
+    <script id="yandex-button" type="text/html">
+      <b style="display:none"></b>
+    </script>
   </head>
   <body>
     <div class="page">
@@ -92,6 +111,9 @@
           <g class="band" clip-path="url(#b13)" data-dx="4"><text x="40" y="125" font-family="Arial Black, Impact, Arial, sans-serif" font-size="130" font-weight="900" fill="black" letter-spacing="0.05em">БИЛЕТЫ</text></g>
         </svg>
       </a>
+      <div class="yandex-ticket-hidden">
+        <y:ticket data-session-id="ticketsteam-7987@61936708" data-template="yandex-button"></y:ticket>
+      </div>
 
       <script>
         (function() {
@@ -108,6 +130,15 @@
               b.style.transform = 'translate(' + dx + 'px,0)';
             });
           }, delay);
+
+          // Click: trigger Yandex ticket widget
+          btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            var yBtn = document.querySelector('.yandex-ticket-hidden b');
+            if (yBtn) {
+              yBtn.click();
+            }
+          });
 
           // Hover: invert glitch
           btn.addEventListener('mouseenter', function() {
@@ -127,6 +158,7 @@
 
       <img class="cat" id="cat" src="img/cat.png" alt="Кот" />
     </div>
+
 
     <script>
       (function() {
