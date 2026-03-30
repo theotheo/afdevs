@@ -31,6 +31,11 @@ body {
   display: block;
 }
 
+.ticket-wrap {
+  position: relative;
+  cursor: pointer;
+}
+
 .ticket-btn {
   display: block;
   text-decoration: none;
