@@ -41,7 +41,7 @@ body {
 }
 
 .ticket-svg {
-  width: min(50vw, 340px);
+  width: min(55vw, 370px);
   height: auto;
   display: block;
 }
