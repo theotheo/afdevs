@@ -37,12 +37,6 @@ body {
   cursor: pointer;
 }
 
-.yandex-ticket-hidden {
-  position: absolute;
-  left: -9999px;
-  opacity: 0;
-  pointer-events: none;
-}
 
 .ticket-svg {
   width: min(55vw, 370px);

@@ -69,9 +69,6 @@
         target.parentNode.insertBefore(script, target);
       })();
     </script>
-    <script id="yandex-button" type="text/html">
-      <b style="display:none"></b>
-    </script>
   </head>
   <body>
     <div class="page">
@@ -111,9 +108,6 @@
           <g class="band" clip-path="url(#b13)" data-dx="4"><text x="40" y="125" font-family="Arial Black, Impact, Arial, sans-serif" font-size="130" font-weight="900" fill="black" letter-spacing="0.05em">БИЛЕТЫ</text></g>
         </svg>
       </a>
-      <div class="yandex-ticket-hidden">
-        <y:ticket data-session-id="ticketsteam-7987@61936708" data-template="yandex-button"></y:ticket>
-      </div>
 
       <script>
         (function() {
@@ -131,12 +125,13 @@
             });
           }, delay);
 
-          // Click: trigger Yandex ticket widget
+          // Click: open Yandex Tickets via dealer API
           btn.addEventListener('click', function(e) {
             e.preventDefault();
-            var yBtn = document.querySelector('.yandex-ticket-hidden b');
-            if (yBtn) {
-              yBtn.click();
+            if (window.YandexTicketsDealer) {
+              window.YandexTicketsDealer.push(['open', {
+                sessionId: 'ticketsteam-7987@61936708'
+              }]);
             }
           });
 
