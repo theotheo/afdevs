@@ -11,6 +11,13 @@ body {
   min-height: 100vh;
   min-height: 100dvh;
   background: #fff;
+  overflow: hidden;
+  transition: background 0.5s, filter 0.5s;
+}
+
+body.dark {
+  background: #000;
+  filter: invert(1);
 }
 
 .page {
@@ -20,7 +27,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   justify-content: space-between;
   padding: 5vh 0 5vh;
 }
@@ -37,6 +43,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 
 .ticket-btn {
@@ -52,8 +59,63 @@ body {
   margin: 0 auto;
 }
 
-.cat {
+.cat-placeholder {
   width: min(20vw, 100px);
+  height: min(20vw, 100px);
+}
+
+.cat {
+  position: fixed;
+  bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(20vw, 100px);
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.cat-body {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cat-extend {
+  width: 100%;
+  height: 0;
+  position: relative;
+}
+
+.cat-extend-leg {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: black;
+}
+
+.cat-extend-leg:nth-child(1) { left: 20.2%; width: 8.3%; }
+.cat-extend-leg:nth-child(2) { left: 33.1%; width: 8.7%; }
+.cat-extend-leg:nth-child(3) { left: 68.4%; width: 8.6%; }
+.cat-extend-leg:nth-child(4) { left: 81.7%; width: 8.4%; }
+
+.cat-legs {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.extra-cat {
+  position: fixed;
+  bottom: -100%;
+  width: min(20vw, 100px);
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+}
+
+.extra-cat img {
+  width: 100%;
   height: auto;
   display: block;
 }
