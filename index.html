@@ -155,11 +155,9 @@
           // Click: open Yandex Tickets
           btn.addEventListener('click', function(e) {
             e.preventDefault();
-            if (window.YandexTicketsDealer) {
-              window.YandexTicketsDealer.push(['open', {
-                sessionId: 'ticketsteam-7987@61936708'
-              }]);
-            }
+            window['YandexTicketsDealer'].push(['getDealer', function(dealer) {
+              dealer.open({ id: '823350', type: 'event' });
+            }]);
           });
 
           // Motion-reactive glitch
